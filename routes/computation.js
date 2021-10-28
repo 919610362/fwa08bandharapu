@@ -9,13 +9,13 @@ router.get('/', (req, res, next) => {
 
         console.log("entered")
         let abso = Math.random()
-        res.render('computation', { value: `power applied to ${abso} is ${Math.abs(power)}` })
+        res.render('computation', { value: `abso applied to ${abso} is ${Math.abs(abso)}` })
     }
     else
         for (let a in req.query) {
             {
                 console.log(a)
-                res.render('computation', { value: `power applied to ${req.query[a]} is ${Math.pow(req.query[a])}` })
+                res.render('computation', { value: `abso applied to ${req.query[a]} is ${Math.abs(req.query[a])}` })
             }
         }
 
