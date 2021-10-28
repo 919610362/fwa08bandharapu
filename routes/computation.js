@@ -9,11 +9,9 @@ router.get('/', function(req, res, next) {
      value =Number(search_params.get("x"))
     if(value == 0)
     value=Math.random()
-    res.write("Computes the values for Math.abs, Math.sin, Math.sinh and Math.acos function."+"\n")
+    res.write("Computes the values for Math.abs and Math.sin function."+"\n")
     res.write('Math.abs applied to '+value+" is "+Math.abs(value)+"\n");
     res.end('Math.sin applied to '+value+" is "+Math.sin(value));
-    res.end('Math.sinh applied to '+value+" is "+Math.sinh(value));
-    res.end('Math.acos applied to '+value+" is "+Math.acos(value));
  });
 
 module.exports = router;
